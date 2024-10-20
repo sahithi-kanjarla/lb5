@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Scrolling Notice */
+.scrolling-notice {
+    font-weight: bold;
+    color: #333;
+    background-color: #ffcc00;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+/* Leaderboard Container */
+.leaderboard-container {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 100%; /* Max width set to 100% to ensure it fits */
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Heading Style */
+.leaderboard-container h2 {
+    color: #004d99;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Info Boxes */
+.info-box {
+    background-color: #e6f2ff;
+    padding: 20px;
+    border: 1px solid #004d99;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #004d99;
+    font-size: 1.2rem;
+}
+
+/* Search Input */
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: 1px solid #004d99;
+    font-size: 1rem;
+}
+
+/* Badges Section */
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.badge-box {
+    background-color: #e0f7fa;
+    border: 1px solid #00838f;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 0 1 150px;
+    width: 150px;
+}
+
+.badge-box:hover {
+    transform: scale(1.05);
+}
+
+.badge-image {
+    height: 70px;
+    width: auto;
+}
+
+.badge-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Table Styling */
+.table-responsive {
+    margin-top: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling for smaller screens */
+    max-width: 100%; /* Ensure table doesn't overflow */
+}
+
+table {
+    table-layout: fixed; /* Fixed layout to ensure proper column width distribution */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead.thead-dark {
+    background-color: #004d99;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+/* Narrower Rank Column */
+table th:nth-child(1), 
+table td:nth-child(1) {
+    width: 50px;
+}
+
+/* Special Badges Images */
+#specialbadges {
+    margin-top: 20px;
+    margin-bottom: -100px;
+}
+
+.special-badge {
+    height: 30px;
+    width: auto;
+    margin: 5px;
+}
+
+/* Badge Name */
+.badge-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #004d99;
+    margin-bottom: 8px;
+}
+
+/* Table Responsiveness */
+@media (max-width: 768px) {
+    .leaderboard-container {
+        padding: 15px;
+    }
+
+    #searchInput {
+        width: 90%;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    table th:nth-child(1), 
+    table td:nth-child(1) {
+        width: 30px;
+    }
+
+    /* Enable horizontal scrolling on small screens */
+    .table-responsive {
+        overflow-x: auto; /* Allow horizontal scroll */
+    }
+}
